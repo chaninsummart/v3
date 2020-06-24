@@ -1,4 +1,4 @@
-FROM nvidia/cuda:8.0-cudnn6-devel-ubuntu16.04
+FROM nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04-rc
 
 
 MAINTAINER Chanin 
@@ -24,7 +24,7 @@ RUN \
 RUN \
 	git clone https://github.com/pjreddie/darknet
 
-WORKDIR darknet/
+WORKDIR D:\CAT\docker\darknet\gpu\Dockerfile
 COPY ./Makefile ./
 RUN \
 	sed -i 's/GPU=.*/GPU=1/' Makefile && \
